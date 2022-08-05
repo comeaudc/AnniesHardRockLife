@@ -1,0 +1,51 @@
+Routes:
+    * Home Page
+    * View All Index Page
+    * View Type of Instrument Index Page
+    * Show Page For Specific Instruments
+    * New Instrument Page
+    * Create Route for Instrument
+    * Edit Instrument Page
+    * Delete Route
+
+
+Stretch Goals:
+    * create default layout with Nav bar
+    * Index search bar(s)
+    * Shopping Cart
+    * Build-A-Band
+
+MVP must Posess All 7 Restful Routes:
+    * index
+    * new
+    * delete
+    * update
+    * create
+    * edit
+    * show
+
+Index Page:
+    * Display all products
+    * images link to show Page
+    * link to add new products
+
+Show Page(s):
+    * Display instrument types index Page
+    * Display instrument model
+    * link back to products
+    * link to edit products(edit page)
+    * Delete Button
+    * Number of items remaining in stock
+
+New & Edit Pages:
+    * views should render forms and submit to the appropriate routes
+
+Redirects:
+    * Create route should redirect to index
+    * Delete route should redirect to index
+    * Update route should redirect to models Show Page
+
+Tech Reqs:
+    * Must Run
+    * Must have all 7 RR 
+    * Must be styled
