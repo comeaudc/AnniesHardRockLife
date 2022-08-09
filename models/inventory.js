@@ -1,7 +1,13 @@
-const inventory = [
-    {type: Piano, model: Yamaha, img: "https://media.guitarcenter.com/is/image/MMGS7/J19265000001000-00-720x720.jpg", quantity: 10},
-    {type: Guitar, model: Seagul, img: "https://media.guitarcenter.com/is/image/MMGS7/L00084000001000-02-720x720.jpg", quantity: 10},
-    {type: Drums, model: Roland, img: "https://media.guitarcenter.com/is/image/MMGS7/L79468000000000-00-720x720.jpg", quantity: 10}
- ];
+const mongoose = require('mongoose');
 
-module.exports = inventory;
+const instrumentSchema = new mongoose.Schema({
+    type:   {type: String, require: true},
+    model:  {type: String, require: true},
+    type:   {type: String, require: true},
+    qty:    {type: Number, require: true},
+    img:    {type: String, require: true}
+})
+
+const Inventory = mongoose.model("Inventory", instrumentSchema)
+
+module.exports = Inventory;
