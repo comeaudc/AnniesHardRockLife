@@ -40,7 +40,7 @@ class Show extends React.Component {
                     <form action={`/api/v1/music/${instrument.type}/${instrument.id}?_method=DELETE`} method="POST">
                         <button className='entryStyle' type="submit">Delete Entry</button>
                     </form>
-                    <a href={"/api/v1/"}><button className='entryStyle'>Back to Main Directory!</button></a>
+                    <a href={"/"}><button className='entryStyle'>Back to Main Directory!</button></a>
                 </div>
                 
             </body>

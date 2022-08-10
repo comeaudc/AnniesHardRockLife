@@ -42,7 +42,7 @@ class Index extends React.Component {
                         );
                     })}
                 </div>
-                <a href={'/api/v1/'}><button><h3>Back to Main Directory!</h3></button></a><br/>
+                <a href={'/'}><button><h3>Back to Main Directory!</h3></button></a><br/>
             </body>
             </html>
         )
