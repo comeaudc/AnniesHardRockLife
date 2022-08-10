@@ -9,9 +9,13 @@ class Edit extends React.Component {
             <head>
                 <title></title>
                 <link rel="stylesheet" href="/css/index.css"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+                <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
             <body>
                 <DefaultLayout></DefaultLayout>
+                <div className='spacer'></div>
                 <h1>Change Instrument Information?</h1>
                 <div className='centering'>
                     <div>

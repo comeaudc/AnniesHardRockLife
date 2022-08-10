@@ -9,46 +9,44 @@ class Index extends React.Component {
             <head>
                 <title>Annie's HRL</title>
                 <link rel="stylesheet" href="/css/index.css"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+                <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
-            <body>
+            <body className='main'>
                 <DefaultLayout></DefaultLayout>
-                <h1>Annie's Hard Rock Life</h1><br/>
+                <div className='spacer'></div>
+                <h1 className='title'>Annie's Hard Rock Life</h1>
                 <h3>Click an Instrument to view!</h3>
-                <ul>
+                <div className='gridContainer'>
                     {inventory.map((instrument) => {
                         let qty;
                         let button;
+                        let name;
                         if(instrument.qty === null || instrument.qty === 0){
                             qty = `Out of Stock!`;
                             button = null;
+                            name = `out`;
                         } else {
                             qty = `Left in Stock: ${instrument.qty}`;
-                            button = <button>Add to Cart</button>
+                            name = `in`;
+                            button = <button className='atc'>Add to Cart</button>
                         }
                         return(
-                            <li>
+                            <div className='item'>
                                 <a href={`/api/v1/music/${instrument.type}/${instrument.id}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
                                 {instrument.type}: {instrument.model} <br/>
-                                {qty}<br/>
-                                {button}<br/>
-                            </li>
+                                <h4 className={name}>{qty}</h4>
+                                {button}
+                            </div>
                         );
                     })}
-                </ul>
+                </div>
                 <a href={'/api/v1/'}><button><h3>Back to Main Directory!</h3></button></a><br/>
             </body>
             </html>
         )
     };
 };
-
-// function buyButton(num){
-//     let qty;
-//     if(instrument.qty === null || instrument.qty === 0){
-//         qty = `Out of Stock!`
-//     } else {
-//         qty = `Left in Stock: ${instrument.qty}`
-//     }
-// }
 
 module.exports = Index;

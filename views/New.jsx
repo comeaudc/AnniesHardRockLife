@@ -8,10 +8,14 @@ class New extends React.Component {
             <head>
                 <title></title>
                 <link rel="stylesheet" href="/css/index.css"/>
+                <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+                <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
             <body>
                 <DefaultLayout></DefaultLayout>
-                <h1>Add a New Instrument?</h1>
+                <div className='spacer'></div>
+                <h1 className='title'>Add a New Instrument?</h1>
                 <h3>Tell me about it!</h3>
                     <form action="/api/v1/music" method="POST">
                         Type:   <input type="radio" id='piano' name="type" value='Piano'/>
