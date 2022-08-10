@@ -1,7 +1,7 @@
 const express = require('express');
 require('dotenv').config();
 const app = express();
-const PORT = process.env.PORT || 3003;
+const port = process.env.PORT || 3003;
 const Inventory = require('./models/inventory');
 const mongoose = require('mongoose');
 const inventoryData = require('./utilities/inventoryData');
@@ -33,7 +33,7 @@ app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine())
 
 // Will be home Directory
-app.get('/api/v1/', (req, res) => {
+app.get('/', (req, res) => {
     res.render("Home")
 });
 
@@ -117,6 +117,6 @@ app.put('/api/v1/music/:type/:model', (req, res) => {
     );
 });
 
-app.listen(PORT, () => {
-    console.log(`I am listening on port: ${PORT}`)
+app.listen(port, () => {
+    console.log(`I am listening on port: ${port}`)
 });
