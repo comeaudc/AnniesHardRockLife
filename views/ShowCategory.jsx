@@ -1,8 +1,9 @@
 const React = require('react');
+const DefaultLayout = require('./layout/Default');
 
 class ShowCategory extends React.Component {
     render(){
-        const { inventory } = this.props;
+        const inventory = this.props.inventory;
         return(
             <html>
             <head>
@@ -10,16 +11,16 @@ class ShowCategory extends React.Component {
                 <link rel="stylesheet" href="/css/index.css"/>
             </head>
             <body>
+                <DefaultLayout></DefaultLayout>
                 <h1>Annie's Hard Rock Life</h1><br/>
-                <h3>You are Browsing {}</h3>
+                <h3>Click an Instrument to view!</h3>
                 <ul>
-                    {inventory.map((instrument, i) => {
-
+                    {inventory.map((instrument) => {
                         return(
                             <li>
-                                <a href={`/api/v1/music/${instrument.type}/${i}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
+                                <a href={`/api/v1/music/${instrument.type}/${instrument.id}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
                                 {instrument.type}: {instrument.model} <br/>
-                                Left in Stock: {instrument.qty}
+                                Left in Stock: {instrument.qty}<br/>
                             </li>
                         );
                     })}

@@ -65,8 +65,11 @@ app.post('/api/v1/music/', (req, res) => {
 
 // Index of all instruments of type
 app.get('/api/v1/music/:type', (req, res) => {
-    res.send(`This is Instrument Type`)
-    // res.render('ShowCategory')
+    Inventory.find({type: req.params.type}, (err, foundInventory) => {
+        res.render('ShowCategory', {
+            inventory: foundInventory
+        })
+    })
 });
 
 //Shows Specific Model info

@@ -1,4 +1,5 @@
 const React = require('react');
+const DefaultLayout = require('./layout/Default');
 
 class Index extends React.Component {
     render(){
@@ -10,6 +11,7 @@ class Index extends React.Component {
                 <link rel="stylesheet" href="/css/index.css"/>
             </head>
             <body>
+                <DefaultLayout></DefaultLayout>
                 <h1>Annie's Hard Rock Life</h1><br/>
                 <h3>Click an Instrument to view!</h3>
                 <ul>

@@ -1,4 +1,5 @@
 const React = require('react');
+const DefaultLayout = require('./layout/Default')
 
 class New extends React.Component {
     render() {
@@ -6,8 +7,10 @@ class New extends React.Component {
             <html>
             <head>
                 <title></title>
+                <link rel="stylesheet" href="/css/index.css"/>
             </head>
             <body>
+                <DefaultLayout></DefaultLayout>
                 <h1>Add a New Instrument?</h1>
                 <h3>Tell me about it!</h3>
                     <form action="/api/v1/music" method="POST">
