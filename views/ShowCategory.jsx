@@ -16,11 +16,21 @@ class ShowCategory extends React.Component {
                 <h3>Click an Instrument to view!</h3>
                 <ul>
                     {inventory.map((instrument) => {
+                        let qty;
+                        let button;
+                        if(instrument.qty === null || instrument.qty === 0){
+                            qty = `Out of Stock!`;
+                            button = null;
+                        } else {
+                            qty = `Left in Stock: ${instrument.qty}`;
+                            button = <button>Add to Cart</button>
+                        }
                         return(
                             <li>
                                 <a href={`/api/v1/music/${instrument.type}/${instrument.id}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
                                 {instrument.type}: {instrument.model} <br/>
-                                Left in Stock: {instrument.qty}<br/>
+                                {qty}<br/>
+                                {button}<br/>
                             </li>
                         );
                     })}

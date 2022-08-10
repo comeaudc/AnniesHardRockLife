@@ -4,6 +4,15 @@ const DefaultLayout = require('./layout/Default');
 class Show extends React.Component {
     render(){
         const instrument = this.props.instrument;
+        let qty;
+        let button;
+        if(instrument.qty === null || instrument.qty === 0){
+            qty = `Out of Stock!`;
+            button = null;
+        } else {
+            qty = `Left in Stock: ${instrument.qty}`;
+            button = <button>Add to Cart</button>
+        }
         return(
             <html>
             <head>
@@ -14,7 +23,8 @@ class Show extends React.Component {
                 <DefaultLayout></DefaultLayout>
                 <h2>{instrument.type}: {instrument.model}</h2><br/>
                 <a href={`/api/v1/music/${instrument.type}/${instrument.model}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
-                <h2>Left in Stock: {instrument.qty}</h2><br/>
+                <h2>{qty}</h2><br/>
+                {button}<br/>
                 <a href={`/api/v1/music/${instrument.type}/${instrument.id}/edit`}><button><h3>Edit Instrument</h3></button></a><br/>
                 <form action={`/api/v1/music/${instrument.type}/${instrument.id}?_method=DELETE`} method="POST">
                     <button type="submit"><h4>Delete Entry</h4></button>
@@ -24,7 +34,7 @@ class Show extends React.Component {
             </body>
             </html>
         )
-    };
+    }
 };
 
 module.exports = Show;
