@@ -38,10 +38,10 @@ app.get('/api/v1/', (req, res) => {
 });
 
 //Seed Route
-app.get('/api/v1/music/seed', (req, res) => {
-    Inventory.create(inventoryData);
-    res.redirect("/api/v1/music")
-});
+// app.get('/api/v1/music/seed', (req, res) => {
+//     Inventory.create(inventoryData);
+//     res.redirect("/api/v1/music")
+// });
 
 // Index of all instruments
 app.get('/api/v1/music', (req, res) => {
