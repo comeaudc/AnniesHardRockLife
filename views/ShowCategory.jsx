@@ -42,7 +42,7 @@ class ShowCategory extends React.Component {
                         );
                     })}
                 </div>
-                <a href={'/'}><button><h3>Back to Main Directory!</h3></button></a><br/>
+                <a href={'/'}><button className='entryStyle'>Back to Main Directory!</button></a><br/>
             </body>
             </html>
         )
