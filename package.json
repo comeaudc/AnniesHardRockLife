@@ -1,6 +1,9 @@
 {
   "name": "annieshrl",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.15.0"
+  },
   "description": "### Routes    VERB \t\t | \t\t  PATH \t\t |  \t DESCRIPTION ------------ | ------------- | ------------------- GET | / | Home Page w/ Directory | GET | /music/ | index of All musical instruments | GET | /music/:instrument | show page for selected imstrument type | GET | /music/:instrument/:model | show page for specific instrument model | GET | /music/new | page to add new instruments | POST | /music/ | post instrument to DB | GET | /music/:instrument/:model/edit | page to edit a specific instrument | PUT | /music/:instrument/:model | edit/update an instruments | DELETE | /music/:instrument/:model | Delete instruments from DB |",
   "main": "server.js",
   "scripts": {
