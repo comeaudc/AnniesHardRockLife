@@ -5,7 +5,8 @@ const instrumentSchema = new mongoose.Schema({
     model:  {type: String, require: true},
     type:   {type: String, require: true},
     qty:    {type: Number, require: true},
-    img:    {type: String, require: true}
+    img:    {type: String, require: true},
+    price:  {type: String, require: true}
 })
 
 const Inventory = mongoose.model("Inventory", instrumentSchema)

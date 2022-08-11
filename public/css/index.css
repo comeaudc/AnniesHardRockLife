@@ -40,14 +40,6 @@ nav>a:hover{
     transition: ease-in-out 500ms;
 }
 
-.centering{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: space-around;
-    align-items: center;
-}
-
 form{
     text-align: left;
 }
@@ -167,4 +159,141 @@ form{
 .entryStyle:hover{
     background-color:  #CE1212;
     opacity: 75%;
+}
+
+.box{
+    height: 100vh;
+    width: 100vw;
+}
+
+.homePg{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+}
+
+.directory{
+    position: fixed;
+    left: 23%;
+    top: 25%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.directory>a{
+    background: #CE1212;
+    border: #1B1717 5px solid;
+    border-radius: 15px;
+    opacity: 70%;
+    text-decoration: none;
+    color: #1B1717;
+    padding: 10px;
+    margin: 10px;
+}
+.directory>a:hover{
+    background-color: grey;
+    color: #EEEBDD;
+    transform: scale(1.1);
+    opacity: 1;
+    transition: ease-in-out 350ms;
+}
+
+.fred{
+    position: fixed;
+    left: -50px;
+}
+.soupy{
+    position: fixed;
+    right: -275px;
+}
+label{
+    cursor: pointer;
+}
+input[type=submit]{
+    cursor: pointer;
+}
+/* ********** Edit Page ********** */
+.left{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    font-size: 1.3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.left>h2{
+    margin: 10px;
+    text-decoration: underline;
+}
+.left>form{
+    font-size: 2rem;
+}
+.left>form>input{
+    font-size: 2rem;
+    border-radius: 10px;
+    margin: 10px;
+    border: 5px #1B1717 ridge;
+}
+input:hover{
+    background-color: #CE1212;
+    color: #EEEBDD;
+    border: 5px #1B1717 ridge;
+}
+
+.right{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border-left: #1B1717 5px solid;
+}
+.right>h2{
+    text-decoration: underline;
+    margin: 10px;
+}
+.right>img{
+    border-radius: 15px;
+    border: 5px ridge #1B1717;
+}
+
+.centering{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.editPage{
+    text-decoration: underline;
+    margin: 10px 0 3rem 0;
+}
+/* ********** New Page ********** */
+.parent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.newPage{
+    text-decoration: underline;
+    margin: 10px 0 10px 0;
+}
+.price{
+    background-color: transparent;
+    border-top: #1B1717 3px solid;
+}
+h2{
+    background-color: transparent;
 }

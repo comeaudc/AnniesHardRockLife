@@ -16,9 +16,9 @@ class Edit extends React.Component {
             <body>
                 <DefaultLayout></DefaultLayout>
                 <div className='spacer'></div>
-                <h1>Change Instrument Information?</h1>
+                <h1 className='editPage'>Change Instrument Information?</h1>
                 <div className='centering'>
-                    <div>
+                    <div className='left'>
                         <h2>What has Changed?</h2>
                         <form action={`/api/v1/music/${instrument.type}/${instrument.id}?_method=PUT`} method="POST">
                             Type:   <input type="radio" id='piano' name="type" value='Piano'/>
@@ -27,18 +27,19 @@ class Edit extends React.Component {
                                         <label for="guitar">Guitar</label>
                                     <input type="radio" id='drums' name="type" value='Drums'/>
                                         <label for="drums">Drums</label><br/>
-                            Model:  <input type="text" name="model" placeholder='Model'/><br/>
-                            Quantity:   <input type="number" name="qty" placeholder='0'/><br/>
-                            Image:  <input type="text" name="img" placeholder='Image URL' /><br/>
-                            <input type="submit" name="" value="Submit Entry"/>
+                            <label for='model'>Model:</label>  <input type="text" id='model' name="model" placeholder='Model'/><br/>
+                            <label for='qty'>Quantity:</label>   <input type="number" id='qty' name="qty" placeholder='0'/><br/>
+                            <label for='price'>Price:</label> <input type="string" id='price' name="price" placeholder='$0'/><br/>
+                            <label for='img'>Image:</label>  <input type="text" id='img' name="img" placeholder='Image URL' /><br/>
+                            <input className='submit' type="submit" name="" value="Submit Entry"/>
                         </form>
                     </div>
-                    <div>
+                    <div className='right'>
                         <h2>Current Info:</h2>
-                        {/* <h2>{instrument.type}: {instrument.model}</h2><br/> */}
-                        <a href={`/api/v1/music/${instrument.type}/${instrument.model}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
-                        <h2>{instrument.type}: {instrument.model}</h2><br/>
-                        <h2>Left in Stock: {instrument.qty}</h2>
+                        <img src={instrument.img} width="35%"/> <br/>
+                        <h3>{instrument.type}: {instrument.model}</h3>
+                        <h3 className='price'>Price: ${instrument.price}</h3>
+                        <h3>Left in Stock: {instrument.qty}</h3>
                     </div>
                 </div>
             </body>

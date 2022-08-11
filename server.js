@@ -37,11 +37,12 @@ app.get('/', (req, res) => {
     res.render("Home")
 });
 
-//Seed Route
-// app.get('/api/v1/music/seed', (req, res) => {
-//     Inventory.create(inventoryData);
-//     res.redirect("/api/v1/music")
-// });
+// Seed Route
+app.get('/api/v1/music/seed', async (req, res) => {
+    await Inventory.deleteMany({})
+    await Inventory.create(inventoryData);
+    res.redirect("/api/v1/music")
+});
 
 // Index of all instruments
 app.get('/api/v1/music', (req, res) => {

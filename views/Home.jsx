@@ -12,13 +12,21 @@ class Home extends React.Component {
                 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
                 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
-            <body>
-                <h1 className='title'>Annie's Hard Rock Life</h1><br/>
-                <a href={'/api/v1/music'}><button><h3>View All Instruments!</h3></button></a><br/>
-                <a href={'/api/v1/music/piano'}><button><h3>View All Pianos!</h3></button></a><br/>
-                <a href={'/api/v1/music/guitar'}><button><h3>View All Guitars!</h3></button></a><br/>
-                <a href={'/api/v1/music/drums'}><button><h3>View All Drums!</h3></button></a><br/>
-                <a href={'/api/v1/music/new'}><button><h3>Add New Instrument!</h3></button></a><br/>
+            <body className='box'>
+                <img className='fred' src='https://m.media-amazon.com/images/M/MV5BYWUzNzYyZjMtNDY5OS00Y2YxLWJkNmQtZDQ3MTMxNjFlNzY3XkEyXkFqcGdeQXVyMzM5MTMxMw@@._V1_FMjpg_UX1000_.jpg' height="100%"></img>
+                <img className='soupy' src='https://media.cdn.setlistfm.com/large/news/2018-11/1543261434557/tw.jpg' height="100%"></img>
+                <div className='direct'>
+                    <img className='homePg' src="https://i.imgur.com/BheIByh.png" title="source: imgur.com" height="100%"/>
+                    <div className='directory'>    
+                        <a href={'/api/v1/music'}>View All Instruments!</a><br/>
+                        <a href={'/api/v1/music/piano'}>View All Pianos!</a><br/>
+                        <a href={'/api/v1/music/guitar'}>View All Guitars!</a><br/>
+                        <a href={'/api/v1/music/drums'}>View All Drums!</a><br/>
+                        <a href={'/api/v1/music/new'}>Add New Instrument!</a><br/>
+                    </div>
+
+                </div>
+                
             </body>
             </html>
         )

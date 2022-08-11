@@ -31,6 +31,7 @@ class Show extends React.Component {
                 <div className='show2'>
                     <h1 className='title2'>{instrument.type}: {instrument.model}</h1>
                     <img className='pic' src={instrument.img} width="350px" height="350px"/> <br/>
+                    <h2>Price: ${instrument.price}</h2>
                     <h2 className={name}>{qty}</h2>
                     {button}
                 </div>
@@ -41,8 +42,7 @@ class Show extends React.Component {
                         <button className='entryStyle' type="submit">Delete Entry</button>
                     </form>
                     <a href={"/"}><button className='entryStyle'>Back to Main Directory!</button></a>
-                </div>
-                
+                </div> 
             </body>
             </html>
         )

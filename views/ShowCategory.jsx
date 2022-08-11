@@ -36,6 +36,7 @@ class ShowCategory extends React.Component {
                             <div className='item'>
                                 <a href={`/api/v1/music/${instrument.type}/${instrument.id}`}><img src={instrument.img} width="150" height="150"/></a> <br/>
                                 {instrument.type}: {instrument.model} <br/>
+                                <h4 className='price'>Price: ${instrument.price}</h4>
                                 <h4 className={name}>{qty}</h4>
                                 {button}<br/>
                             </div>
