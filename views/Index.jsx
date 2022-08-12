@@ -4,6 +4,7 @@ const DefaultLayout = require('./layout/Default');
 class Index extends React.Component {
     render(){
         const { inventory } = this.props;
+        console.log(inventory) 
         return(
             <html>
             <head>
@@ -14,7 +15,7 @@ class Index extends React.Component {
                 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
             <body className='main'>
-                <DefaultLayout></DefaultLayout>
+            <DefaultLayout></DefaultLayout>
                 <div className='spacer'></div>
                 <h1 className='title'>Annie's Hard Rock Life</h1>
                 <h3>Click an Instrument to view!</h3>
@@ -30,7 +31,14 @@ class Index extends React.Component {
                         } else {
                             qty = `Left in Stock: ${instrument.qty}`;
                             name = `in`;
-                            button = <button className='atc'>Add to Cart</button>
+                            button = <form className='atcForm' action="/api/v1/music/cart/" method="POST">
+                                        <input type={"hidden"} name='type' value={instrument.type}/>
+                                        <input type={"hidden"} name='model' value={instrument.model}/>
+                                        <input type={"hidden"} name='qty' value={1}/>
+                                        <input type={"hidden"} name='price' value={instrument.price}/>
+                                        <input type={"hidden"} name='img' value={instrument.img}/>
+                                        <input className='atc' type={"submit"} value={`Add to Cart`}/>
+                                    </form>
                         }
                         return(
                             <div className='item'>

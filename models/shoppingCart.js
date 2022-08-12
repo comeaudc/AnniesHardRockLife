@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const instrumentSchema = new mongoose.Schema({
+const cartSchema = new mongoose.Schema({
     type:   {type: String, require: true},
     model:  {type: String, require: true},
     qty:    {type: Number, require: true},
@@ -8,6 +8,6 @@ const instrumentSchema = new mongoose.Schema({
     price:  {type: String, require: true}
 })
 
-const Inventory = mongoose.model("Inventory", instrumentSchema)
+const ShoppingCart = mongoose.model("ShoppingCart", cartSchema)
 
-module.exports = Inventory;
+module.exports = ShoppingCart;

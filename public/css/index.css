@@ -89,6 +89,12 @@ form{
     border: #1B1717 3px ridge;
     cursor: pointer;
 }
+.atcForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
 
 .atc:hover{
     background-color:  #CE1212;
@@ -296,4 +302,18 @@ input:hover{
 }
 h2{
     background-color: transparent;
+}
+/* ********** New Page ********** */
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+.app input{
+    margin-top: 10px;
+}
+p{
+    margin: 10px;
 }
