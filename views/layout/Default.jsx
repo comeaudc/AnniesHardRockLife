@@ -1,5 +1,5 @@
 const React = require('react');
-import SearchBar from '../Search';
+// import SearchBar from '../Search';
 
 class DefaultLayout extends React.Component {
     render(){

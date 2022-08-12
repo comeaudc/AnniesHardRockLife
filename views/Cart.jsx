@@ -17,6 +17,7 @@ class Cart extends React.Component {
             <DefaultLayout></DefaultLayout>
                 <div className='spacer'></div>
                 <h1 className='title'>Annie's Hard Rock Life</h1>
+                <h2 className='title'>Your Shopping Cart</h2>
                 <h3>Click an item to view!</h3>
                 <div className='gridContainer'>
                     {cart.map((item) => {
@@ -42,7 +43,7 @@ class Cart extends React.Component {
                         );
                     })}
                 </div>
-                <a href={'/'}><button className='entryStyle'>Back to Main Directory!</button></a><br/>
+                <a href={'/'}><button className='entryStyle'>Get Back To Shopping</button></a><br/>
             </body>
             </html>
         )
