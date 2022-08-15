@@ -49,7 +49,21 @@ form{
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
-
+.gridContainer2{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+.yourCart{
+    display: flex;
+    align-items: center;
+}
+.totals{
+    margin: 60px;
+}
+.total{
+    text-decoration: underline;
+}
 .item{
     text-align: center;
     height: auto;

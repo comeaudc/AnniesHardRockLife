@@ -35,6 +35,7 @@ class ShowCategory extends React.Component {
                                         <input type={"hidden"} name='qty' value={1}/>
                                         <input type={"hidden"} name='price' value={instrument.price}/>
                                         <input type={"hidden"} name='img' value={instrument.img}/>
+                                        <input type={"hidden"} name='item' value={instrument.id}/>
                                         <input className='atc' type={"submit"} value={`Add to Cart`}/>
                                     </form>
                             name = `in`

@@ -28,7 +28,7 @@ class New extends React.Component {
                                     <label for="drums">Drums</label><br/>
                         Model: <input type="text" name="model" placeholder='Model'/><br/>
                         Quantity: <input type="number" name="qty" placeholder='0'/><br/>
-                        Price: <input type="string" name="price" placeholder='$0'/><br/>
+                        Price: <input type="number" name="price" placeholder='$0'/><br/>
                         Image: <input type="text" name="img" placeholder='Image URL' /><br/>
                         <input type="submit" name="" value="Submit Entry"/>
                     </form>

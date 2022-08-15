@@ -4,14 +4,13 @@ const DefaultLayout = require('./layout/Default');
 class Index extends React.Component {
     render(){
         const { inventory } = this.props;
-        console.log(inventory) 
         return(
             <html>
             <head>
                 <title>Annie's HRL</title>
                 <link rel="stylesheet" href="/css/index.css"/>
                 <link rel="preconnect" href="https://fonts.googleapis.com"></link>
-                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+                <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin></link>
                 <link href="https://fonts.googleapis.com/css2?family=New+Rocker&display=swap" rel="stylesheet"></link>
             </head>
             <body className='main'>
@@ -20,10 +19,11 @@ class Index extends React.Component {
                 <h1 className='title'>Annie's Hard Rock Life</h1>
                 <h3>Click an Instrument to view!</h3>
                 <div className='gridContainer'>
-                    {inventory.map((instrument) => {
+                    {inventory.map((instrument, i) => {
                         let qty;
                         let button;
                         let name;
+                        // eval(`let item${i}+= React.createRef`)
                         if(instrument.qty === null || instrument.qty === 0){
                             qty = `Out of Stock!`;
                             button = null;
@@ -37,8 +37,9 @@ class Index extends React.Component {
                                         <input type={"hidden"} name='qty' value={1}/>
                                         <input type={"hidden"} name='price' value={instrument.price}/>
                                         <input type={"hidden"} name='img' value={instrument.img}/>
+                                        <input type={"hidden"} name='item' value={instrument.id}/>
                                         <input className='atc' type={"submit"} value={`Add to Cart`}/>
-                                    </form>
+                                     </form>
                         }
                         return(
                             <div className='item'>

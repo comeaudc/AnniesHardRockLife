@@ -3,9 +3,6 @@ const React = require('react');
 
 class DefaultLayout extends React.Component {
     render(){
-        const onSearchSubmit = term => {
-            console.log('New Search submit', term); 
-          }
         const inventory = this.props;
         return(
             <header>

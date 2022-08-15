@@ -13,7 +13,15 @@ class Show extends React.Component {
             name = `out`
         } else {
             qty = `Left in Stock: ${instrument.qty}`;
-            button = <button className='atc'>Add to Cart</button>
+            button = <form className='atcForm' action="/api/v1/music/cart/" method="POST">
+                        <input type={"hidden"} name='type' value={instrument.type}/>
+                        <input type={"hidden"} name='model' value={instrument.model}/>
+                        <input type={"hidden"} name='qty' value={1}/>
+                        <input type={"hidden"} name='price' value={instrument.price}/>
+                        <input type={"hidden"} name='img' value={instrument.img}/>
+                        <input type={"hidden"} name='item' value={instrument.id}/>
+                        <input className='atc' type={"submit"} value={`Add to Cart`}/>
+                    </form>
             name = `in`
         }
         return(
