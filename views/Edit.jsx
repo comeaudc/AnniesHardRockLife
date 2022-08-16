@@ -29,7 +29,7 @@ class Edit extends React.Component {
                                         <label for="drums">Drums</label><br/>
                             <label for='model'>Model:</label><input type="text" id='model' name="model" placeholder='Model'/><br/>
                             <label for='qty'>Quantity:</label><input type="number" id='qty' name="qty" placeholder='0'/><br/>
-                            <label for='price'>Price:</label><input type="number" id='price' name="price" placeholder='$0'/><br/>
+                            <label for='price'>Price:</label><input type="number" id='price' name="price" placeholder='$0'step=".01"/><br/>
                             <label for='img'>Image:</label><input type="text" id='img' name="img" placeholder='Image URL' /><br/>
                             <input className='submit' type="submit" name="" value="Submit Entry"/>
                         </form>
