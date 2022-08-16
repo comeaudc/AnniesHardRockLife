@@ -1,3 +1,4 @@
+// Data for seed route
 const inventoryData = [
     {type: "Piano", model: "Yamaha P-45 88-key Digital", img: "https://media.guitarcenter.com/is/image/MMGS7/J19265000001000-00-720x720.jpg", qty: 10,  price: 549.99},
     {type: "Piano", model: "Yamaha P-45LXB Digital", img: "https://media.guitarcenter.com/is/image/MMGS7/L30314000001000-00-720x720.jpg", qty: 10,  price: 759.99},

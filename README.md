@@ -1,31 +1,40 @@
 # Annie's Hard Rock Life
+A website for Musicians by Musicians. Built for Per Scholas to demonstrate knowledge and understanding of backend development.
 
-## Overview
+### Overview
+[Link to Website Overview Video](https://www.youtube.com/embed/A9iCeKx56DQ)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/A9iCeKx56DQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-### Routes
+### API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
 ------------ | ------------- | -------------------
-GET | api/v1/ | Home Page w/ Directory |
-GET | api/v1/music/ | index of All musical instruments |
-GET | api/v1/music/:instrument | show page for selected imstrument type |
-GET | api/v1/music/:instrument/:model | show page for specific instrument model |
-GET | api/v1/music/new | page to add new instruments |
-POST | api/v1/music/ | post instrument to DB |
-GET | api/v1/music/:instrument/:model/edit | page to edit a specific instrument |
-PUT | api/v1/music/:instrument/:model | edit/update an instruments |
-DELETE | api/v1/music/:instrument/:model | Delete instruments from DB |
+GET | / | Home Page w/ Directory |
+GET | /api/v1/music/ | Index of All musical instruments |
+GET | /api/v1/music/:instrument | Show page for selected imstrument types |
+GET | /api/v1/music/:instrument/:model | Show page for specific instrument model |
+GET | /api/v1/music/new | Page to add new instruments |
+POST | /api/v1/music/ | Post instrument to DB |
+GET | /api/v1/music/cart | Page to view shopping cart |
+DELETE | /api/v1/music/cart/:id | Delete Items from Shopping Cart |
+GET | /api/v1/music/:instrument/:model/edit | Page to edit a specific instrument |
+PUT | /api/v1/music/:instrument/:model | Edit/update an instruments |
+DELETE | api/v1/music/:instrument/:model | Delete instrument from DB |
 
- ## Built With:
+### Built With:
 * JavaScript
 * CSS
 * React.js
 * Express.js
 * MongoDB
 
-### Possible Updates:
+### Future Updates:
 * Search Bar
+* Checkout Button w/decrementing function
 * Build-A-Band
    * Pick a combo of big 3 instruments
    * Guitar, Piano, Drums
+
+## Authors:
+- [Dylan Comeau](https://github.com/comeaudc/)
+
+## Acknowledgements
+- [Pictures & Instrument Descriptions](https://www.guitarcenter.com/)

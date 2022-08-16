@@ -1,5 +1,7 @@
+// Require Mongoose
 const mongoose = require('mongoose');
 
+// Schema for shopping cart
 const cartSchema = new mongoose.Schema({
     type:   {type: String, require: true},
     model:  {type: String, require: true},

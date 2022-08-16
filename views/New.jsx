@@ -1,4 +1,5 @@
 const React = require('react');
+// Require nav layout
 const DefaultLayout = require('./layout/Default')
 
 class New extends React.Component {
