@@ -75,7 +75,7 @@ app.get('/api/v1/music/cart', (req, res) =>{
 // Index of all instruments of type
 app.get('/api/v1/music/:type', (req, res) => {
     Inventory.find({type: req.params.type}, (err, foundInventory) => {
-        res.render('ShowCategory', {
+        res.render('Index', {
             inventory: foundInventory
         })
     })

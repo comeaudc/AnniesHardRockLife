@@ -52,7 +52,7 @@ class Cart extends React.Component {
                         <h1><span className="total">Total:</span> ${(total + (total * .07)).toFixed(2)}</h1>
                     </div>
                 </div>
-                <a href={'/'}><button className='entryStyle'>Get Back To Shopping</button></a><br/>
+                <a href={'/api/v1/music'}><button className='entryStyle'>Get Back To Shopping</button></a><br/>
             </body>
             </html>
         )

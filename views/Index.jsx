@@ -23,7 +23,6 @@ class Index extends React.Component {
                         let qty;
                         let button;
                         let name;
-                        // eval(`let item${i}+= React.createRef`)
                         if(instrument.qty === null || instrument.qty === 0){
                             qty = `Out of Stock!`;
                             button = null;
