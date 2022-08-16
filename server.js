@@ -72,6 +72,12 @@ app.get('/api/v1/music/cart', (req, res) =>{
         })
     })
 })
+//Add to cart post
+app.post('/api/v1/music/cart/', (req, res) => {
+    ShoppingCart.create(req.body, (err, addItem) => {
+        res.redirect('/api/v1/music/cart')
+    })
+})
 // Index of all instruments of type
 app.get('/api/v1/music/:type', (req, res) => {
     Inventory.find({type: req.params.type}, (err, foundInventory) => {
@@ -80,13 +86,6 @@ app.get('/api/v1/music/:type', (req, res) => {
         })
     })
 });
-
-//Add to cart post
-app.post('/api/v1/music/cart/', (req, res) => {
-    ShoppingCart.create(req.body, (err, addItem) => {
-        res.redirect('/api/v1/music/cart')
-    })
-})
 
 //Shows Specific Model info
 app.get('/api/v1/music/:type/:model', (req, res) => {
@@ -140,7 +139,6 @@ app.put('/api/v1/music/:type/:model', (req, res) => {
         }
     );
 });
-app.put
 
 app.listen(port, () => {
     console.log(`I am listening on port: ${port}`)
