@@ -60,6 +60,8 @@ form{
 }
 .totals{
     margin: 60px;
+    padding-left: 60px;
+    border-left: #1B1717 3px solid;
 }
 .total{
     text-decoration: underline;

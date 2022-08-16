@@ -9,6 +9,7 @@ const inventoryData = [
     {type: "Guitar", model: "Gretsch Guitars G6659TFM Players Edition", img: "https://media.guitarcenter.com/is/image/MMGS7/J48628000001000-00-720x720.jpg", qty: 10,  price: 2999.99},
     {type: "Guitar", model: "Gibson Custom EDS-1275 Double Neck Electric", img: "https://media.guitarcenter.com/is/image/MMGS7/L76498000001000-02-720x720.jpg", qty: 10,  price: 6899.00},
     {type: "Guitar", model: "Dean Dimebag Razorback DB Electric", img: "https://media.guitarcenter.com/is/image/MMGS7/H86807000002000-02-720x720.jpg", qty: 10,  price: 499.99},
+    {type: "Guitar", model: "Doggo Guitaro", img: "https://media.istockphoto.com/photos/funny-dog-breed-jagdterrier-standing-with-acoustic-guitar-isolated-on-picture-id1158030103?k=20&m=1158030103&s=612x612&w=0&h=6XYxcnLthUKXXl2qGrFJOg_VMrVZfQ43SWIb1NrOLa4=", qty: 1,  price: 1000000},
     {type: "Drums", model: "Roland TD-07KV Electronic Drum Set", img: "https://media.guitarcenter.com/is/image/MMGS7/L79468000000000-00-720x720.jpg", qty: 10,  price: 999.99},
     {type: "Drums", model: "Ludwig Pocket Kit Black Sparkle", img: "https://media.guitarcenter.com/is/image/MMGS7/J41130000001000-00-720x720.jpg", qty: 10,  price: 399.00},
     {type: "Drums", model: "DW Collector's Series Purpleheart", img: "https://media.guitarcenter.com/is/image/MMGS7/J55419000000000-00-720x720.jpg", qty: 10,  price: 10321.25},
