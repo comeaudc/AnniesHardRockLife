@@ -2,7 +2,8 @@
 A website for Musicians by Musicians. Built for Per Scholas to demonstrate knowledge and understanding of backend development.
 
 ### Overview
-[Link to Website Overview Video](https://www.youtube.com/embed/A9iCeKx56DQ)
+- [Link to the Deployed App](https://annies-hrl.herokuapp.com/ )
+- [Link to a Website Overview Video](https://www.youtube.com/embed/A9iCeKx56DQ)
 
 ### API Reference
    VERB 		 | 		  PATH 		 |  	 DESCRIPTION
